@@ -1,0 +1,3 @@
+[submodule "aaproto/src"]
+	path = aaproto/src
+	url = https://github.com/WardBenjamin/AAProto
