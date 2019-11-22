@@ -15,7 +15,7 @@ TODO: Windows libusb download, Linux udev rules
 
 ## Documentation
 
-Future documentation will be posted to ReadTheDocs
+Future documentation will be posted to [ReadTheDocs](https://fusecast.rtfd.io)
 
 ## Reporting bugs/Submitting patches
 
