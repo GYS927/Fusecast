@@ -43,9 +43,11 @@ def workaround_libusb_win():
 
     # TODO: The above code works, but sending a control transfer to the device results in the following stack trace:
     # https://gist.github.com/WardBenjamin/fee9a94561b7be5beff8e08497be3aec
+    # NOTE: LibUSB 1.0.22 MS64, UsbDK 1.0-21, Python 3.8.0 x64, Windows 10 Pro x64
     # NOTE: See the following links:
     # https://github.com/daynix/UsbDk/issues/34
     # https://github.com/daynix/UsbDk/issues/5
+    # https://github.com/pyusb/pyusb/issues/200
 
     # For this reason, development on Windows is currently halted
 
