@@ -1,15 +1,20 @@
-import ctypes
-from ctypes import WinDLL
-from ctypes.util import find_library
-
 import usb.core
-import usb.libloader
+import time
 
-import platform
-
+from aoap_device import AndroidOpenAccessoryDevice
 from platform_specific import setup_workarounds
 
 setup_workarounds()
 
-dev = usb.core.find(idVendor=0x18D1, idProduct=0x4EE1)  # Test device: Google Pixel 3A
-print(dev)
+shutdown = False
+
+# TODO: Add application structure
+while not shutdown:
+    # TODO: Search for all phones. Vendor list w/ IDs can be found in Crankshaft udev rules.
+    # TODO: How to detect if a device is a phone?
+    aoap_device = AndroidOpenAccessoryDevice(0x18D1, 0x4EE1)  # Test device: Google Pixel 3A
+    if aoap_device.is_valid():
+        shutdown = True
+    time.sleep(0.1)
+
+print(aoap_device.device)
